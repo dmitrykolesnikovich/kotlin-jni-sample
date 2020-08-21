@@ -6,14 +6,6 @@
 
 static Store store;
 
-/*extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
-    JNIEnv* env;
-    if (vm->GetEnv(reinterpret_cast<void**>(&env), JNI_VERSION_1_6) != JNI_OK) return -1;
-
-    store.mLength = 0;
-    return JNI_VERSION_1_6;
-}*/
-
 extern "C"
 JNIEXPORT jint JNICALL
 Java_featurea_kotlinJniSample_store_Store_getCount(JNIEnv* env, jobject pThis) {
@@ -25,7 +17,7 @@ JNIEXPORT jstring JNICALL
 Java_featurea_kotlinJniSample_store_Store_getString(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_String)) {
-        return pEnv->NewStringUTF(entry->mValue.mString); // Converts a C string into a Java String.
+        return pEnv->NewStringUTF(entry->mValue.mString); // converts a C string into a Java String
     } else {
         return NULL;
     }
@@ -111,18 +103,13 @@ Java_featurea_kotlinJniSample_store_Store_getByte(JNIEnv* pEnv, jobject pThis, j
 extern "C"
 JNIEXPORT void JNICALL
 Java_featurea_kotlinJniSample_store_Store_setString(JNIEnv* pEnv, jobject pThis, jstring pKey, jstring pString) {
-    // Turns the Java string into a temporary C string.
-    StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
+    StoreEntry* entry = allocateEntry(pEnv, &store, pKey); // turns the Java string into a temporary C string
     if (entry != NULL) {
         entry->mType = StoreType_String;
-        // Copy the temporary C string into its dynamically allocated
-        // final location. Then releases the temporary string.
-        jsize stringLength = pEnv->GetStringUTFLength(pString);
+        jsize stringLength = pEnv->GetStringUTFLength(pString); // copy the temporary C string into its dynamically allocated final location. Then releases the temporary string
         entry->mValue.mString = new char[stringLength + 1];
-        // Directly copies the Java String into our new C buffer.
-        pEnv->GetStringUTFRegion(pString, 0, stringLength, entry->mValue.mString);
-        // Append the null character for string termination.
-        entry->mValue.mString[stringLength] = '\0';
+        pEnv->GetStringUTFRegion(pString, 0, stringLength, entry->mValue.mString); // directly copies the Java String into our new C buffer
+        entry->mValue.mString[stringLength] = '\0'; // append the null character for string termination
     }
 }
 
@@ -143,9 +130,6 @@ Java_featurea_kotlinJniSample_store_Store_setObject(JNIEnv* pEnv, jobject pThis,
     if (entry != NULL) {
         entry->mType = StoreType_Object;
         entry->mValue.mObject = pEnv->NewGlobalRef(pObject);
-        if(entry->mValue.mObject != NULL) {
-            // __android_log_print(ANDROID_LOG_INFO,  __FUNCTION__, "SUCCESS");
-        }
     }
 }
 
@@ -219,8 +203,6 @@ Java_featurea_kotlinJniSample_store_Store_getObject(JNIEnv* pEnv, jobject pThis,
         return NULL;
     }
 }
-
-
 
 extern "C"
 JNIEXPORT jboolean JNICALL
