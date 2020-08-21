@@ -22,13 +22,13 @@ extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved)
 
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_ihorkucherenko_storage_Store_getCount(JNIEnv* env, jobject pThis) {
+Java_featurea_kotlinJniSample_store_Store_getCount(JNIEnv* env, jobject pThis) {
     return store.mLength;
 }
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_ihorkucherenko_storage_Store_getString(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_getString(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_String)) {
         // Converts a C string into a Java String.
@@ -40,7 +40,7 @@ Java_com_ihorkucherenko_storage_Store_getString(JNIEnv* pEnv, jobject pThis, jst
 
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_ihorkucherenko_storage_Store_getInteger(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_getInteger(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_Integer)) {
         return entry->mValue.mInteger;
@@ -51,7 +51,7 @@ Java_com_ihorkucherenko_storage_Store_getInteger(JNIEnv* pEnv, jobject pThis, js
 
 extern "C"
 JNIEXPORT jfloat JNICALL
-Java_com_ihorkucherenko_storage_Store_getFloat(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_getFloat(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_Float)) {
         return entry->mValue.mFloat + 80.5; // just for debug todo delete `+ 80.5`
@@ -62,7 +62,7 @@ Java_com_ihorkucherenko_storage_Store_getFloat(JNIEnv* pEnv, jobject pThis, jstr
 
 extern "C"
 JNIEXPORT jboolean JNICALL
-Java_com_ihorkucherenko_storage_Store_getBoolean(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_getBoolean(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_Boolean)) {
         return entry->mValue.mBoolean;
@@ -73,7 +73,7 @@ Java_com_ihorkucherenko_storage_Store_getBoolean(JNIEnv* pEnv, jobject pThis, js
 
 extern "C"
 JNIEXPORT jshort JNICALL
-Java_com_ihorkucherenko_storage_Store_getShort(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_getShort(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_Short)) {
         return entry->mValue.mShort;
@@ -84,7 +84,7 @@ Java_com_ihorkucherenko_storage_Store_getShort(JNIEnv* pEnv, jobject pThis, jstr
 
 extern "C"
 JNIEXPORT jdouble JNICALL
-Java_com_ihorkucherenko_storage_Store_getDouble(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_getDouble(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_Double)) {
         return entry->mValue.mDouble;
@@ -95,7 +95,7 @@ Java_com_ihorkucherenko_storage_Store_getDouble(JNIEnv* pEnv, jobject pThis, jst
 
 extern "C"
 JNIEXPORT jlong JNICALL
-Java_com_ihorkucherenko_storage_Store_getLong(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_getLong(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_Long)) {
         return entry->mValue.mLong;
@@ -106,7 +106,7 @@ Java_com_ihorkucherenko_storage_Store_getLong(JNIEnv* pEnv, jobject pThis, jstri
 
 extern "C"
 JNIEXPORT jbyte JNICALL
-Java_com_ihorkucherenko_storage_Store_getByte(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_getByte(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_Byte)) {
         return entry->mValue.mByte;
@@ -117,7 +117,7 @@ Java_com_ihorkucherenko_storage_Store_getByte(JNIEnv* pEnv, jobject pThis, jstri
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_ihorkucherenko_storage_Store_setString(JNIEnv* pEnv, jobject pThis, jstring pKey, jstring pString) {
+Java_featurea_kotlinJniSample_store_Store_setString(JNIEnv* pEnv, jobject pThis, jstring pKey, jstring pString) {
     // Turns the Java string into a temporary C string.
     StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
     if (entry != NULL) {
@@ -135,7 +135,7 @@ Java_com_ihorkucherenko_storage_Store_setString(JNIEnv* pEnv, jobject pThis, jst
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_ihorkucherenko_storage_Store_setInteger(JNIEnv* pEnv, jobject pThis, jstring pKey, jint pInteger) {
+Java_featurea_kotlinJniSample_store_Store_setInteger(JNIEnv* pEnv, jobject pThis, jstring pKey, jint pInteger) {
     StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
     if (entry != NULL) {
         entry->mType = StoreType_Integer;
@@ -145,7 +145,7 @@ Java_com_ihorkucherenko_storage_Store_setInteger(JNIEnv* pEnv, jobject pThis, js
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_ihorkucherenko_storage_Store_setObject(JNIEnv* pEnv, jobject pThis, jstring pKey, jobject pObject) {
+Java_featurea_kotlinJniSample_store_Store_setObject(JNIEnv* pEnv, jobject pThis, jstring pKey, jobject pObject) {
     StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
     if (entry != NULL) {
         entry->mType = StoreType_Object;
@@ -158,7 +158,7 @@ Java_com_ihorkucherenko_storage_Store_setObject(JNIEnv* pEnv, jobject pThis, jst
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_ihorkucherenko_storage_Store_setFloat(JNIEnv* pEnv, jobject pThis, jstring pKey, jfloat pFloat) {
+Java_featurea_kotlinJniSample_store_Store_setFloat(JNIEnv* pEnv, jobject pThis, jstring pKey, jfloat pFloat) {
     StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
     if (entry != NULL) {
         entry->mType = StoreType_Float;
@@ -168,7 +168,7 @@ Java_com_ihorkucherenko_storage_Store_setFloat(JNIEnv* pEnv, jobject pThis, jstr
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_ihorkucherenko_storage_Store_setShort(JNIEnv* pEnv, jobject pThis, jstring pKey, jshort pShort) {
+Java_featurea_kotlinJniSample_store_Store_setShort(JNIEnv* pEnv, jobject pThis, jstring pKey, jshort pShort) {
     StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
     if (entry != NULL) {
         entry->mType = StoreType_Short;
@@ -178,7 +178,7 @@ Java_com_ihorkucherenko_storage_Store_setShort(JNIEnv* pEnv, jobject pThis, jstr
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_ihorkucherenko_storage_Store_setLong(JNIEnv* pEnv, jobject pThis, jstring pKey, jlong pLong) {
+Java_featurea_kotlinJniSample_store_Store_setLong(JNIEnv* pEnv, jobject pThis, jstring pKey, jlong pLong) {
     StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
     if (entry != NULL) {
         entry->mType = StoreType_Long;
@@ -188,7 +188,7 @@ Java_com_ihorkucherenko_storage_Store_setLong(JNIEnv* pEnv, jobject pThis, jstri
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_ihorkucherenko_storage_Store_setDouble(JNIEnv* pEnv, jobject pThis, jstring pKey, jdouble pDouble) {
+Java_featurea_kotlinJniSample_store_Store_setDouble(JNIEnv* pEnv, jobject pThis, jstring pKey, jdouble pDouble) {
     StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
     if (entry != NULL) {
         entry->mType = StoreType_Double;
@@ -198,7 +198,7 @@ Java_com_ihorkucherenko_storage_Store_setDouble(JNIEnv* pEnv, jobject pThis, jst
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_ihorkucherenko_storage_Store_setByte(JNIEnv* pEnv, jobject pThis, jstring pKey, jbyte pByte) {
+Java_featurea_kotlinJniSample_store_Store_setByte(JNIEnv* pEnv, jobject pThis, jstring pKey, jbyte pByte) {
     StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
     if (entry != NULL) {
         entry->mType = StoreType_Byte;
@@ -208,7 +208,7 @@ Java_com_ihorkucherenko_storage_Store_setByte(JNIEnv* pEnv, jobject pThis, jstri
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_ihorkucherenko_storage_Store_setBoolean(JNIEnv* pEnv, jobject pThis, jstring pKey, jboolean pBoolean) {
+Java_featurea_kotlinJniSample_store_Store_setBoolean(JNIEnv* pEnv, jobject pThis, jstring pKey, jboolean pBoolean) {
     StoreEntry* entry = allocateEntry(pEnv, &store, pKey);
     if (entry != NULL) {
         entry->mType = StoreType_Boolean;
@@ -218,7 +218,7 @@ Java_com_ihorkucherenko_storage_Store_setBoolean(JNIEnv* pEnv, jobject pThis, js
 
 extern "C"
 JNIEXPORT jobject JNICALL
-Java_com_ihorkucherenko_storage_Store_getObject(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_getObject(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_Object)) {
         return entry->mValue.mObject;
@@ -231,7 +231,7 @@ Java_com_ihorkucherenko_storage_Store_getObject(JNIEnv* pEnv, jobject pThis, jst
 
 extern "C"
 JNIEXPORT jboolean JNICALL
-Java_com_ihorkucherenko_storage_Store_hasEntry(JNIEnv* pEnv, jobject pThis, jstring pKey) {
+Java_featurea_kotlinJniSample_store_Store_hasEntry(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     return entry != NULL;
 }

@@ -1,4 +1,4 @@
-package com.ihorkucherenko.storage
+package featurea.kotlinJniSample.store
 
 class Store {
 

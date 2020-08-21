@@ -1,4 +1,4 @@
-package com.ihorkucherenko.storage
+package featurea.kotlinJniSample.store
 
 enum class StoreType {
     String,
