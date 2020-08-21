@@ -51,7 +51,7 @@ JNIEXPORT jfloat JNICALL
 Java_featurea_kotlinJniSample_store_Store_getFloat(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_Float)) {
-        return entry->mValue.mFloat + 80.5; // just for debug todo delete `+ 80.5`
+        return entry->mValue.mFloat;
     } else {
         return NULL;
     }
