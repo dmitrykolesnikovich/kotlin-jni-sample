@@ -6,16 +6,13 @@
 
 static Store store;
 
-extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved)
-{
+/*extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
     JNIEnv* env;
     if (vm->GetEnv(reinterpret_cast<void**>(&env), JNI_VERSION_1_6) != JNI_OK) return -1;
 
-    // Get jclass with env->FindClass.
-    // Register methods with env->RegisterNatives.
     store.mLength = 0;
     return JNI_VERSION_1_6;
-}
+}*/
 
 extern "C"
 JNIEXPORT jint JNICALL
@@ -28,8 +25,7 @@ JNIEXPORT jstring JNICALL
 Java_featurea_kotlinJniSample_store_Store_getString(JNIEnv* pEnv, jobject pThis, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, &store, pKey);
     if (isEntryValid(pEnv, entry, StoreType_String)) {
-        // Converts a C string into a Java String.
-        return pEnv->NewStringUTF(entry->mValue.mString);
+        return pEnv->NewStringUTF(entry->mValue.mString); // Converts a C string into a Java String.
     } else {
         return NULL;
     }

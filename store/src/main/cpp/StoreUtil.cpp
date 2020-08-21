@@ -4,18 +4,14 @@
 #include <cstdlib>
 #include <cstring>
 
-bool isEntryValid(JNIEnv* pEnv, StoreEntry* pEntry, StoreType pType)
-{
-    if(pEntry == NULL)
-    {
+bool isEntryValid(JNIEnv* pEnv, StoreEntry* pEntry, StoreType pType) {
+    if(pEntry == NULL) {
         throwNoKeyException(pEnv);
     }
-
     return ((pEntry != NULL) && (pEntry->mType == pType));
 }
 
-StoreEntry* findEntry(JNIEnv* pEnv, Store* pStore, jstring pKey)
-{
+StoreEntry* findEntry(JNIEnv* pEnv, Store* pStore, jstring pKey) {
     StoreEntry* entry = pStore->mEntries;
     StoreEntry* endEntry = entry + pStore->mLength;
     const char* tmpKey = pEnv->GetStringUTFChars(pKey, NULL);
@@ -26,8 +22,7 @@ StoreEntry* findEntry(JNIEnv* pEnv, Store* pStore, jstring pKey)
     return (entry == endEntry) ? NULL : entry;
 }
 
-StoreEntry* allocateEntry(JNIEnv* pEnv, Store* pStore, jstring pKey)
-{
+StoreEntry* allocateEntry(JNIEnv* pEnv, Store* pStore, jstring pKey) {
     StoreEntry* entry = findEntry(pEnv, pStore, pKey);
     if( entry !=  NULL) {
         releaseEntryValue(pEnv, entry);
@@ -44,8 +39,7 @@ StoreEntry* allocateEntry(JNIEnv* pEnv, Store* pStore, jstring pKey)
     return entry;
 }
 
-void releaseEntryValue(JNIEnv* pEnv, StoreEntry* pEntry)
-{
+void releaseEntryValue(JNIEnv* pEnv, StoreEntry* pEntry) {
     switch (pEntry->mType) {
         case StoreType_String:
             delete pEntry->mValue.mString;

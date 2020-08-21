@@ -1,7 +1,3 @@
-//
-// Created by Ihor Kucherenko on 6/22/17.
-//
-
 #ifndef INMEMORYSTORAGE_STORE_H
 #define INMEMORYSTORAGE_STORE_H
 
@@ -45,4 +41,4 @@ typedef struct {
     int32_t mLength;
 } Store;
 
-#endif //INMEMORYSTORAGE_STORE_H
+#endif

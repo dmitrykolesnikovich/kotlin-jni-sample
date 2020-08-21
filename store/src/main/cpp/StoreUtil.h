@@ -1,7 +1,3 @@
-//
-// Created by Ihor Kucherenko on 6/22/17.
-//
-
 #ifndef INMEMORYSTORAGE_STOREUTIL_H
 #define INMEMORYSTORAGE_STOREUTIL_H
 
@@ -18,4 +14,4 @@ void releaseEntryValue(JNIEnv* pEnv, StoreEntry* pEntry);
 
 void throwNoKeyException(JNIEnv* pEnv);
 
-#endif //INMEMORYSTORAGE_STOREUTIL_H
+#endif
