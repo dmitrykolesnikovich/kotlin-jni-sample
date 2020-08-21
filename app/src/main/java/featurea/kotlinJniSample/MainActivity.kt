@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
             0 -> store.setString(keyText, valueText)
             1 -> store.setInteger(keyText, valueText.toInt())
             2 -> store.setFloat(keyText, valueText.toFloat())
-
         }
         this.keyEditText.setText("")
         this.valueEditText.setText("")
