@@ -1,2 +1,2 @@
 include ':app'
-include ':in_memory_storage'
+include ':store'

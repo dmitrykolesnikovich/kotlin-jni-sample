@@ -1,0 +1,4 @@
+/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/release/armeabi-v7a/CMakeFiles/Store.dir
+/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/release/armeabi-v7a/CMakeFiles/StoreUtil.dir

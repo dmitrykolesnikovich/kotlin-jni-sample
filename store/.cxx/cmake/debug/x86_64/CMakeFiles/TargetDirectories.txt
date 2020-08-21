@@ -1,0 +1,4 @@
+/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64/CMakeFiles/Store.dir
+/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64/CMakeFiles/rebuild_cache.dir
+/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64/CMakeFiles/edit_cache.dir
+/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64/CMakeFiles/StoreUtil.dir

@@ -1,0 +1,64 @@
+{
+  "stringTable": {
+    "0": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/release/x86",
+    "1": "--target=i686-none-linux-android19 --gcc-toolchain=/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DStore_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O2 -DNDEBUG -fPIC",
+    "2": "--target=i686-none-linux-android19 --gcc-toolchain=/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DStoreUtil_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O2 -DNDEBUG -fPIC"
+  },
+  "buildFiles": [
+    "/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/build/cmake/platforms.cmake",
+    "/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/build/cmake/android.toolchain.cmake",
+    "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/release/x86\" clean"
+  ],
+  "buildTargetsCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/release/x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "Store-Release-x86": {
+      "buildCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/release/x86\" Store",
+      "buildType": "release",
+      "toolchain": "1066111669",
+      "abi": "x86",
+      "artifactName": "Store",
+      "files": [
+        {
+          "src": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/src/main/cpp/Store.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/src/main/cpp/StoreUtil.cpp",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/build/intermediates/cmake/release/obj/x86/libStore.so"
+    },
+    "StoreUtil-Release-x86": {
+      "buildCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/release/x86\" StoreUtil",
+      "buildType": "release",
+      "toolchain": "1066111669",
+      "abi": "x86",
+      "artifactName": "StoreUtil",
+      "files": [
+        {
+          "src": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/src/main/cpp/StoreUtil.cpp",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/build/intermediates/cmake/release/obj/x86/libStoreUtil.so"
+    }
+  },
+  "toolchains": {
+    "1066111669": {
+      "cppCompilerExecutable": "/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

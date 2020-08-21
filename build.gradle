@@ -19,7 +19,6 @@ buildscript {
 
 buildscript {
     repositories {
-        // mavenLocal() // quickfix todo uncomment for publishToMavenLocal to work
         mavenCentral()
         jcenter()
         maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
@@ -33,7 +32,6 @@ buildscript {
 
 subprojects {
     repositories {
-        // mavenLocal() // quickfix todo uncomment for publishToMavenLocal to work
         mavenCentral()
         jcenter()
         maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }

@@ -1,0 +1,25 @@
+{
+  "buildFiles": [
+    "/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/build/cmake/platforms.cmake",
+    "/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/build/cmake/android.toolchain.cmake",
+    "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64\" clean"
+  ],
+  "buildTargetsCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "Store-Debug-x86_64": {
+      "artifactName": "Store",
+      "buildCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64\" Store",
+      "abi": "x86_64",
+      "output": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/build/intermediates/cmake/debug/obj/x86_64/libStore.so"
+    },
+    "StoreUtil-Debug-x86_64": {
+      "artifactName": "StoreUtil",
+      "buildCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64\" StoreUtil",
+      "abi": "x86_64",
+      "output": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/build/intermediates/cmake/debug/obj/x86_64/libStoreUtil.so"
+    }
+  }
+}
