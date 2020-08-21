@@ -7,8 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
-import com.ihorkucherenko.inmemorystorage.R
-import com.ihorkucherenko.storage.Store
+import featurea.kotlinJniSample.store.Store
 
 class MainActivity : AppCompatActivity() {
 

@@ -4,8 +4,6 @@
 #include <cstdlib>
 #include <cstring>
 
-// #include <android/log.h>
-
 bool isEntryValid(JNIEnv* pEnv, StoreEntry* pEntry, StoreType pType)
 {
     if(pEntry == NULL)

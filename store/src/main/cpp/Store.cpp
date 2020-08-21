@@ -4,13 +4,10 @@
 #include "Store.h"
 #include "StoreUtil.h"
 
-// #include <android/log.h>
-
 static Store store;
 
 extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved)
 {
-    // __android_log_print(ANDROID_LOG_INFO,  __FUNCTION__, "onLoad");
     JNIEnv* env;
     if (vm->GetEnv(reinterpret_cast<void**>(&env), JNI_VERSION_1_6) != JNI_OK) return -1;
 
