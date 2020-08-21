@@ -216,14 +216,11 @@ Project_BINARY_DIR:STATIC=/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store
 
-//Dependencies for the target
-StoreUtil_LIB_DEPENDS:STATIC=general;/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so;
+//Dependencies for target
+StoreUtil_LIB_DEPENDS:STATIC=
 
-//Dependencies for the target
-Store_LIB_DEPENDS:STATIC=general;/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so;
-
-//Path to a library.
-log-lib:FILEPATH=/Users/dmitrykolesnikovich/Library/Android/sdk/ndk/21.2.6472646/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so
+//Dependencies for target
+Store_LIB_DEPENDS:STATIC=
 
 
 ########################

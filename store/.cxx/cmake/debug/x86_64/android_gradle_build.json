@@ -14,6 +14,22 @@
   ],
   "buildTargetsCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
+    "StoreUtil-Debug-x86_64": {
+      "buildCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64\" StoreUtil",
+      "buildType": "debug",
+      "toolchain": "1066111669",
+      "abi": "x86_64",
+      "artifactName": "StoreUtil",
+      "files": [
+        {
+          "src": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/src/main/cpp/StoreUtil.cpp",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/build/intermediates/cmake/debug/obj/x86_64/libStoreUtil.so"
+    },
     "Store-Debug-x86_64": {
       "buildCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64\" Store",
       "buildType": "debug",
@@ -34,22 +50,6 @@
       ],
       "headers": [],
       "output": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/build/intermediates/cmake/debug/obj/x86_64/libStore.so"
-    },
-    "StoreUtil-Debug-x86_64": {
-      "buildCommand": "/Users/dmitrykolesnikovich/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/.cxx/cmake/debug/x86_64\" StoreUtil",
-      "buildType": "debug",
-      "toolchain": "1066111669",
-      "abi": "x86_64",
-      "artifactName": "StoreUtil",
-      "files": [
-        {
-          "src": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/src/main/cpp/StoreUtil.cpp",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "headers": [],
-      "output": "/Users/dmitrykolesnikovich/workspace/kotlin-jni-sample/store/build/intermediates/cmake/debug/obj/x86_64/libStoreUtil.so"
     }
   },
   "toolchains": {
