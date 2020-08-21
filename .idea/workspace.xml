@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="236e3511-2a09-42ad-9f52-e8f5b4e174a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in_memory_storage/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/store/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in_memory_storage/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/store/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in_memory_storage/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in_memory_storage/src/main/cpp/Store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/cpp/Store.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in_memory_storage/src/main/cpp/Store.h" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/cpp/Store.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in_memory_storage/src/main/cpp/StoreUtil.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/cpp/StoreUtil.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in_memory_storage/src/main/cpp/StoreUtil.h" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/cpp/StoreUtil.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in_memory_storage/src/main/java/com/ihorkucherenko/storage/Store.kt" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/ihorkucherenko/storage/Store.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/in_memory_storage/src/main/java/com/ihorkucherenko/storage/StoreType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/ihorkucherenko/storage/StoreType.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/AndroidManifest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +34,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1gPZg4pb75JROuUfinoIVhC8a4l" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,9 +45,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/store/src/main/java/featurea/kotlinJniSample/store" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="featurea.kotlinJniSample" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/store/src/main/java/featurea/kotlinJniSample/store" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -85,5 +89,11 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="506" y="247" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1598018551479">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="506" y="247" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1598018551479" />
   </component>
 </project>
